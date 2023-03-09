@@ -6,3 +6,11 @@
 
 
 
+
+
+enum class OBJ_GROUP {
+	PLAYER,
+	ENEMY,
+	EFFECT,
+	END,
+};

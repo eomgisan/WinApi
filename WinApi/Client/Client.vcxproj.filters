@@ -26,6 +26,15 @@
     <Filter Include="03. Manager\KeyMgr">
       <UniqueIdentifier>{02d0a628-a20e-4ae3-8d56-c32955f2142f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04. Object\Player">
+      <UniqueIdentifier>{35d0b570-407b-4548-8cf4-13fd0ac2c2d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Scene">
+      <UniqueIdentifier>{f9a368c2-b994-4b83-a66c-7c684a3729f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Scene\SceneFightStage">
+      <UniqueIdentifier>{b054fc15-64ce-4680-9b0e-c6217521277b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -62,6 +71,15 @@
     <ClInclude Include="CObject.h">
       <Filter>04. Object</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>04. Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>05.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneFightStage.h">
+      <Filter>05.Scene\SceneFightStage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -92,6 +110,15 @@
     </ClCompile>
     <ClCompile Include="CObject.cpp">
       <Filter>04. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>04. Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>05.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneFightStage.cpp">
+      <Filter>05.Scene\SceneFightStage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
