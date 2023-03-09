@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="00. Default">
+      <UniqueIdentifier>{61238b46-9400-4c41-824b-18f021adcbfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Define">
+      <UniqueIdentifier>{85a7f333-2c76-4448-85a1-ff6608057fce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02. Core">
+      <UniqueIdentifier>{613913fc-6e79-4091-9efc-64804e6f1f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Manager">
+      <UniqueIdentifier>{6afa2b7c-5969-4cdd-be39-ae97448c4932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04. Object">
+      <UniqueIdentifier>{2b74f757-7984-4cb6-bf5b-b34d33747bcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>00. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>00. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>00. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Client.h">
+      <Filter>00. Default</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>01. Define</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="struct.h">
+      <Filter>01. Define</Filter>
+    </ClInclude>
+    <ClInclude Include="CCore.h">
+      <Filter>02. Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Client.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="CCore.cpp">
+      <Filter>02. Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
