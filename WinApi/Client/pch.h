@@ -14,3 +14,4 @@ using std::wstring;
 #include "struct.h"
 
 #include <assert.h>
+#include "func.h"

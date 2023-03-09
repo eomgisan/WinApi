@@ -90,6 +90,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     //=======================
     //     manager 초기화
     //=======================
+
     CCore::GetInstance()->init(g_hWnd, POINT{ 800,600 });
 
 
@@ -103,7 +104,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
     while (true) {
-        if (PeekMessageW(&msg, g_hWnd, 0, 0, PM_REMOVE)) {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
 
             if (msg.message == WM_QUIT)
                 break;

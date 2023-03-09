@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CCore.h"
-
+#include "CKeyMgr.h"
 
 CCore::CCore() 
 	:	m_hWnd(0)
@@ -52,7 +52,7 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	//		Manger ÃÊ±âÈ­
 	// ========================
 
-	
+	CKeyMgr::GetInstance()->init();
 
 	return S_OK;
 }
@@ -68,7 +68,7 @@ void CCore::process()
 
 void CCore::update()
 {
-	int a = 0;
+	CKeyMgr::GetInstance()->update();
 }
 
 void CCore::render()

@@ -20,6 +20,12 @@
     <Filter Include="04. Object">
       <UniqueIdentifier>{2b74f757-7984-4cb6-bf5b-b34d33747bcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03. Manager\TimeMgr">
+      <UniqueIdentifier>{49f9859f-a1b6-44ed-b383-4ea92ac2bf9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Manager\KeyMgr">
+      <UniqueIdentifier>{02d0a628-a20e-4ae3-8d56-c32955f2142f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -44,6 +50,15 @@
     <ClInclude Include="CCore.h">
       <Filter>02. Core</Filter>
     </ClInclude>
+    <ClInclude Include="CKeyMgr.h">
+      <Filter>03. Manager\KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeMgr.h">
+      <Filter>03. Manager\TimeMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>01. Define</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -62,6 +77,15 @@
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="CCore.cpp">
       <Filter>02. Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyMgr.cpp">
+      <Filter>03. Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeMgr.cpp">
+      <Filter>03. Manager\TimeMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>01. Define</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
