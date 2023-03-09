@@ -22,6 +22,6 @@ private:
 public:
 	void process();
 
-
+	const HWND& getHWND() { return m_hWnd; }
 };
 

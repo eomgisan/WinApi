@@ -59,6 +59,9 @@
     <ClInclude Include="func.h">
       <Filter>01. Define</Filter>
     </ClInclude>
+    <ClInclude Include="CObject.h">
+      <Filter>04. Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -86,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="func.cpp">
       <Filter>01. Define</Filter>
+    </ClCompile>
+    <ClCompile Include="CObject.cpp">
+      <Filter>04. Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

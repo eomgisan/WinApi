@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CKeyMgr.h"
 #include "CCore.h"
+#include "CTimeMgr.h"
+
 
 int g_arrVK[(int)KEY::END] = {
 	VK_LEFT,
@@ -31,7 +33,7 @@ void CKeyMgr::init()
 {
 	for (UINT i = 0; i < (UINT)KEY::END; ++i) {
 		tKeyInfo* temp = new tKeyInfo;
-		temp->bPrevPush = false;
+		temp->dHoldTime = 0.;
 		temp->key_state = KEY_STATE::NONE;
 		m_vecInfo.push_back(temp);
 	}
@@ -50,31 +52,31 @@ void CKeyMgr::update()
 			
 			if (GetAsyncKeyState(g_arrVK[i]) & 0x8000) {
 				// 눌렸을 경우
-				if (m_vecInfo[i]->bPrevPush) {
- 					m_vecInfo[i]->key_state = KEY_STATE::HOLD;
+				if (m_vecInfo[i]->dHoldTime >= 1. && m_vecInfo[i]->key_state == KEY_STATE::TAP) {
+   					m_vecInfo[i]->key_state = KEY_STATE::HOLD;
 				}
 				else {
 					m_vecInfo[i]->key_state = KEY_STATE::TAP;
 				}
 				
-				m_vecInfo[i]->bPrevPush = true;
+				m_vecInfo[i]->dHoldTime += DT;
 			}
 			else {
 				// 안눌렸을 경우
-				if (m_vecInfo[i]->bPrevPush) {
+				if (m_vecInfo[i]->key_state == KEY_STATE::HOLD || m_vecInfo[i]->key_state == KEY_STATE::TAP) {
 					m_vecInfo[i]->key_state = KEY_STATE::AWAY;
 				}
 				else {
 					m_vecInfo[i]->key_state = KEY_STATE::NONE;
 				}
 
-				m_vecInfo[i]->bPrevPush = false;
+				m_vecInfo[i]->dHoldTime = 0.;
 			}
 		}
 	}
 	else {
 		for (int i = 0; i < (int)KEY::END; ++i) {
-			m_vecInfo[i]->bPrevPush = false;
+			m_vecInfo[i]->dHoldTime = 0.;
 			if (m_vecInfo[i]->key_state == KEY_STATE::TAP || m_vecInfo[i]->key_state == KEY_STATE::HOLD) {
 				m_vecInfo[i]->key_state = KEY_STATE::AWAY;
 			}

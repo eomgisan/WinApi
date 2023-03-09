@@ -32,7 +32,7 @@ enum class KEY_STATE {
 
 struct tKeyInfo {
 	KEY_STATE	key_state;
-	bool		bPrevPush;
+	double		dHoldTime;
 };
 
 
@@ -54,5 +54,6 @@ public:
 	void update();
 
 	KEY_STATE GetKeyState(KEY _key);
+	
 };
 
